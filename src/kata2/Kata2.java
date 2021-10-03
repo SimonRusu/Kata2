@@ -23,14 +23,10 @@ public class Kata2 {
         Map<Integer,Integer> histogram = new HashMap<>();
         
         
-        for (int i = 0; i < data.length; i++) {
-            
-            if(histogram.get(data[i]) != null){                
-                histogram.put(data[i], histogram.get(data[i])+1);
-            }
-            else histogram.put(data[i],1);
-            
-            System.out.println(data[i] + "==>" + histogram.get(data[i]));
+        for (int key : data) {
+            histogram.put(key, histogram.containsKey(key) ?
+                    histogram.get(key) +1 : 1);
+            System.out.println(data[key] + "==>" + histogram.get(key));
         }
     }
     
