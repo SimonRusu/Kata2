@@ -16,12 +16,12 @@ import java.util.Map;
 public class Kata2 {
     
     public static void main(String[] args) {
-        Integer[] data = {6,7,0,4,4,7,7,7,4,6,2,4,8,2,2};
+        String[] data = {"Carmen", "Jorge", "Carmen", "Jorge", "Carmen", "Rafa"};
         Histogram histo = new Histogram(data);
         
         Map<Integer,Integer> histogr = histo.getHistogram();
         
-        for (int key : data) {
+        for (String key : data) {
             System.out.println(key + "==>" + histogr.get(key));
         }  
        
