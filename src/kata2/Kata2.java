@@ -5,7 +5,6 @@
  */
 package kata2;
 
-import java.util.HashMap;
 import java.util.Map;
 
 
@@ -15,19 +14,18 @@ import java.util.Map;
  * @author Simon
  */
 public class Kata2 {
-
-    
     
     public static void main(String[] args) {
         int[] data = {6,7,0,4,4,7,7,7,4,6,2,4,8,2,2};
-        Map<Integer,Integer> histogram = new HashMap<>();
+        Histogram histo = new Histogram(data);
         
+        Map<Integer,Integer> histogr = histo.getHistogram();
         
         for (int key : data) {
-            histogram.put(key, histogram.containsKey(key) ?
-                    histogram.get(key) +1 : 1);
-            System.out.println(data[key] + "==>" + histogram.get(key));
-        }
+            System.out.println(key + "==>" + histogr.get(key));
+        }  
+       
+
     }
     
 }
